@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% block data%}
+  <h2 class="impact">
+     LOGIN
+   </h2>
+
+   <div class="{{validL.color}}">{{validL.pagemessage}}</div>
+	 
+  <form method="post" action="server.php">
+
+  <p class="title">
+  	  <label> Email </label>
+  	  <br>
+  	  <input required type="text" name="Email" placeholder="Email" value="{{formvaluesL.email}}">
+      <div class="error">{{validL.emailError}}<div>
+    </p>
+
+
+    <p class="title">
+  	  <label> Password </label>
+  	  <br>
+  	  <input required type="password" name="Password" placeholder="Password">
+      <div class="error">{{validL.passError}}<div>
+    </p>
+
+    <p class="title">
+  	  <button type="submit" class="btn" name="login_user">Login</button>
+    </p>
+  	
+  </form>
+{% endblock %}

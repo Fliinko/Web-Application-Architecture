@@ -1,0 +1,34 @@
+{% extends "layout.html"%}
+{% block data%}
+    <h2 class = "impact"> BOOK A TABLE </h2>
+
+    <form action="bookatable.php" method="GET">
+
+    <div class="{{valid.color}}">{{valid.pageMessage}}</div>
+    
+     <p class="title">
+  	  <label> Enter date of Reservation </label>
+      <br>
+        <input required type="date" name="date">
+        <div class = "error">{{valid.dateError}}</div>
+    </p>
+
+    <p class="title">
+  	  <label> Enter time of Reservation </label>
+      <br>
+        <input required type="time" name="time">
+        <div class = "error">{{valid.timeError}}</div>
+    </p>
+
+    <p class="title">
+  	  <label> Enter Number of People </label>
+      <br>
+        <input required type="number" name="seats" placeholder="Enter No. of People">
+        <div class = "error">{{valid.seatError}}</div>
+    </p>
+
+    <p class="title">
+        <button type="submit" class="btn" name="book_submit">Book</button>
+    </p>
+    </form>
+{% endblock %}

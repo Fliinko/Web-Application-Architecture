@@ -1,0 +1,29 @@
+{% extends "layout.html"%} 
+
+{%block data%}
+    <h2 class="impact"> Favorites </h2>
+
+    {% for favorite in favorites%}
+        <div class="menu">
+            <a class="menu" href="dish.php?id={{favorite.s_id}}">
+            <img class="menu" src="Images/{{favorite.s_img}}" height="125" width="125"><p>
+            {{favorite.s_name}} ‎€{{favorite.s_cost}}</p></a>
+        </div>
+    {% endfor %}
+
+    <h3 class="impact"> Share your Favorites List </h3>
+
+    <form action="favorites.php?" method="GET">
+    <div class="{{valid.color}}">{{valid.pageMessage}}</div>
+    <div class = "error">{{valid.sendError}}</div>
+    <p class="title">
+  	    <label> Enter email </label>
+        <br>
+        <input required type="email" name="email">
+        <div class = "error">{{valid.emailError}}</div>
+    </p>
+    <p class="title">
+        <button type="submit" class="btn" name="send">Send</button>
+    </p>
+    </form>
+{% endblock %}

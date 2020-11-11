@@ -1,0 +1,12 @@
+{% extends "layout.html"%} 
+
+{%block data%}
+    <h2 class="impact">  MEET THE STAFF  </h2>
+    {% for staff in members%}
+        <span>
+            <img src="Images/{{staff.s_img}}" style="border: 3px solid #d16e11;" height="400" width="300">
+            <p class = "changecolour"><b>{{staff.s_name}} {{staff.s_surname}} - {{staff.s_profession}}</b></p>
+            <p class = "changecolour">{{staff.s_description}}</p>
+        </span>
+    {% endfor %}
+{% endblock %}

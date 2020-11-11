@@ -1,0 +1,35 @@
+{% extends "layout.html"%} 
+
+{%block data%}
+    <h2 class="impact"> MENU </h2>
+
+    <h3 class="impact"> Starters </h3>
+
+    {% for starter in  starters%}
+        <div class="menu">
+            <a class="menu" href="dish.php?id={{starter.s_id}}">
+            <img class="menu" src="Images/{{starter.s_img}}" height="125" width="125"><p>
+            {{starter.s_name}} ‎€{{starter.s_cost}}</p></a>
+        </div>
+    {% endfor %}
+
+    <h3 class="impact"> Main Course </h3>
+
+    {% for main in  mains%}
+        <div class="menu">
+            <a class="menu" href="dish.php?id={{main.s_id}}">
+            <img class="menu" src="Images/{{main.s_img}}" height="125" width="125"><p>
+            {{main.s_name}} ‎€{{main.s_cost}}</p></a>
+        </div>
+    {% endfor %}
+
+    <h3 class="impact"> Desserts </h3>
+
+    {% for dessert in  desserts%}
+        <div class="menu">
+            <a class="menu" href="dish.php?id={{dessert.s_id}}">
+            <img class="menu" src="Images/{{dessert.s_img}}" height="125" width="125"><p>
+            {{dessert.s_name}} ‎€{{dessert.s_cost}}</p></a>
+        </div>
+    {% endfor %}
+{% endblock %}

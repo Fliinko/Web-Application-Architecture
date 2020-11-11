@@ -1,0 +1,10 @@
+{% extends "layout.html"%}
+{% block data%}
+    <div class = "plant">
+            {% for table in tables%}
+            <button class = "table">
+                {{table.t_number}}
+            </button>
+            {% endfor %}
+    </div>
+{% endblock %}

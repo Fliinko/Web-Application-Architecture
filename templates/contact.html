@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block data %}
+    <h2 class="impact"> CONTACT US </h2>
+
+    <p class="contact">Mobile: +356 {{contact.mobile}} </p>
+    <p class="contact">Telephone: +356 {{contact.tele}} </p>
+    <p class="contact">Email: {{contact.email}}</p>
+    <p class="contact">Address: {{contact.address}} </p>
+
+    <h2 class="impact"> Give us your Feedback </h2>
+
+    <div class="{{valid.color}}">{{valid.pagemessage}}</div>
+
+    <form action="server.php" id="usrform" method = "POST">
+    <p class="contact"> Name:
+    <input type="text" name="username" required value = "{{ formvalues.username}}">
+    <div class = "error">{{valid.usernameError}}</div>
+    <p class="title">
+  	<button type="submit" class="btn" name="feedback">Submit</button>
+    </p>
+    </p>
+    </form>
+
+    <p class="textbox">
+    <textarea rows="4" cols="50" name="input" required value = "{{ formvalues.input}}" 
+    form="usrform" placeholder="Enter Feedback Here..."> </textarea>
+    <div class = "error">{{valid.inputError}}</div>
+    </p>
+
+{% endblock %}
+

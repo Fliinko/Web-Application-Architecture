@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ta' Ninu</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="icon" href="Images/icon.png" type="image/gif" sizes="16x16">
+</head>
+<body>
+    <div class="toppart">
+        <h1 class="impact"><b>Ta' Ninu Restaurant</b></h1>
+        <a class="register" href="register.php">Register</a>
+        <a class="login" href="login.php">Login</a>
+        <a class="favorites" href="favorites.php?page=true">Favorites</a>
+    </div>
+    <ul>
+        <li><a class="header" href="index.php">Home</a></li>
+        <li><a class="header" href="contact.php">Contact Us</a></li>
+        <li><a class="header" href="staff.php">Staff</a></li>
+        <li><a class="header" href="menu.php">Menu</a></li>
+        <li><a class="header" href="bookatable.php">Book A Table</a></li>
+    </ul>
+
+        {% block data %}
+        {% endblock %}
+
+<div class="footer">taninurestaurant@gmail.com</div>
+</body>
+</html>

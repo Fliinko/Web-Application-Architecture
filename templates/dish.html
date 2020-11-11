@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block data %}
+    <h2 class="impact"> Dish </h2>
+
+    <img class="dish" src="Images/{{dish.img}}" height="300" width="300">
+    <div class="faves">
+        <a href = "favorites.php?dish={{dish.id}}&add=true" title = "Add to Favorites"><img src="Images/Task2_heart.png" height="50" width="50"></a>
+        <a href = "favorites.php?dish={{dish.id}}&delete=true" title = "Remove from Favorites"><img src="Images/Task2_trashcan.png" height="50" width="50"></a>
+    </div>
+    <div class="dish">
+        <p class="dish">Category: {{dish.category}} </p>
+        <p class="dish">Type: {{dish.type}} </p>
+        <p class="dish">Name: {{dish.name}}</p>
+        <p class="dish">Ingredients: {{dish.desc}}</p>
+        <p class="dish">Cost: €{{dish.cost}}</p>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "layout.html"%}
+{% block data %}
+   <h2 class="impact">
+     Register your Account
+   </h2>
+
+
+  <form method="post" action="server.php">
+
+    <div class="{{valid.color}}">{{valid.pagemessage}}</div>
+    
+  	<p class="title">
+  	  <label> Name </label>
+      <br>
+  	  <input required value="{{ formvalues.name }}" type="text" name="Name" placeholder="Name">
+      <div class = "error">{{valid.nameError}}</div>
+    </p>
+
+    <p class="title">
+  	  <label> Surname </label>
+      <br>
+  	  <input required value="{{ formvalues.surname }}" type="text" name="Surname" placeholder="Surname">
+      <div class = "error">{{valid.surnameError}}</div>
+    </p>
+      
+    <p class="title">
+  	  <label> Email </label>
+      <br>
+  	  <input required value="{{ formvalues.email }}" type="email" name="Email" placeholder="Email">
+      <div class = "error">{{valid.emailError}}</div>
+    </p>
+      
+    <p class="title">
+  	  <label> Telephone </label>
+      <br>
+  	  <input required value="{{ formvalues.tele }}" type="text" name="Telephone" placeholder="Telephone">
+      <div class = "error">{{valid.teleError}}</div>
+    </p>
+      
+    <p class="title">
+  	  <label> Password </label>
+      <br>
+  	  <input required type="password" name="Password1" placeholder="Password"></div>
+      <div class = "error">
+    </p>
+
+    <p class="title">
+  	  <label>Confirm password</label>
+      <br>
+  	  <input required type="password" name="Password2" placeholder="Confirm Password">
+      <div class = "error">{{valid.passError}}</div>
+    </p>
+      
+    <p class="title">
+  	  <button type="submit" class="btn" name="reg_user">Register</button>
+    </p>
+
+{% endblock %}

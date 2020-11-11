@@ -1,0 +1,22 @@
+{% extends "layout.html"%} 
+
+{%block data%}
+
+    <h2 class="impact"> {{home.name}}</h2>
+
+    <p class="title"> Our Story </p>
+
+    <p class="home">{{home.story}}</p>
+
+    <p class="title"><b>Opening Hours</b><br></p>
+
+    <p class="home"> Monday - Saturday: {{home.opening1}} - {{home.closing1}}</p>
+    <p class="home"> Sunday: {{home.opening2}} - {{home.closing2}} </p>
+
+    <p class="title"> Where To Find Us </p>
+
+    <p class="home"> {{home.desc}}</p>
+
+    <p class="home"> {{home.address}} </p>
+
+{%endblock%}
